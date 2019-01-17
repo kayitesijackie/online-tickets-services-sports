@@ -47,10 +47,22 @@ h2{
     color:#fff;
      background: #4e594c;
 }
+
+.gif{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12%;
+  margin-top: -2px;
+  margin-bottom: 20px;
+}
+.form-heading{
+    text-align: center;
+}
 .login{
-           width: 500px;
-         }
-         .center{
+    width: 500px;
+}
+.center{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -59,5 +71,13 @@ h2{
   margin-bottom: 20px;
   width:150px;
    height:80px;
-
+}
+.form-heading{
+    text-align: center;
+}
+#LoginForm{
+    background-image:url("");
+}
+h3{
+    font-style: oblique;
 }

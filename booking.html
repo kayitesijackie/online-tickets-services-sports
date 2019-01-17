@@ -1,14 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>booking</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    
-</body>
-</html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Online Ticket Services</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  </head>
+  <body>
+  	<div id="container">
+	  <div id="form">
+	    <form id="book_tickets">
+	      <fieldset>
+	        <legend>Booking Details</legend>
+
+	        <p>
+	          <label for="Sports"> Sports</label>
+	          <select id="Sports" name="Sports" required autofocus>
+	            <option></option>
+	            <option value="Sport1">Football</option>
+	            <option value="Sport2">vallball</option>
+	            <option value="Sport3">basktball</option>
+	          </select>
+	        </p>
+
+	        <p>
+	          <label for="Match">Match</label>
+	          <select id="Match" required>
+	            <option></option>
+	            <option value="Match 1">Kiyovu Sport VS Mukura FC"</option>
+	            <option value="Match 2">APR FC VS Rayon SPORT</option>
+	            <option value="Match 3">Bugesera FC VS Police FC </option>
+	          </select>
+	        </p>
+
+	        <p>
+	          <label for="date">Date<br/><span id="dateNote"><a href="https://support.mozilla.org/en-US/questions/986096"></a>.</span></label>
+	          <input type="date" name="date" id="date" min="today" required />
+	        </p>
+
+	        <p>
+	          <label for="email">Email</label>
+	          <input type="email" name="email" id="email" required />
+	        </p>
+
+	        <p>
+	          <label for="tickets_quantity">Tickets</label>
+	          <input type="number" min="1" name="tickets_quantity" id="tickets_quantity" required />
+	        </p>
+	        <p>
+	          <label for="tickets_quantity">Prices</label>
+	          <select>
+	          <option value="Match "></option>
+	         <option value="Match 1">1000rwf</option>
+	            <option value="Match 2">3000rwf</option>
+	            <option value="Match 3">5000rwf</option>
+	            </select>
+	          <!-- <input type="number" min="2000" name="tickets_quantity" id="tickets_quantity" required /> -->
+	        </p>
+
+	        <p>
+	          <label>Total Price</label>
+	          <span id="total_price">(enter data first)</span>
+	        </p>
+	        <div id="submit_wrapper">
+	          <input type="submit" id="submit" value="Book Tickets" />
+	        </div>
+	      </fieldset>
+	    </form>
+	  <!--   <p id="TicketPrice"></p> -->
+	    <!-- <p id="discount">
+	      <span id="disount_title">Discounts:</span>
+	    <ul>
+	      <li>5% discount if show is on weekday</li>
+	      <li>10% discount if number of booked shows >= 10</li>
+	    </ul>
+	    </p> -->
+	</div>
+
+	<!-- <fieldset id="movies_booked">
+	  <legend>Movies Booked Till Date</legend>
+	  <span id="movies_list"></span>
+	</fieldset>		 -->    	
+
+	</div>
+
+
+	<!-- <script id="worker" type="javascript/worker">
+	        self.onmessage = function msgWorkerHandler(event){
+	            var jsonString = event.data;
+
+	            var day = jsonString.day;
+	            var number_booked_shows = jsonString.number_booked_shows;
+	            var tickets_quantity = jsonString.tickets_quantity;
+
+	            // set price of each ticket as Rwf. 100
+	            var totalPrice = tickets_quantity * 100;
+<!-- 
+	            // 5% discount if on weekday
+	            if(day > 0 && day < 6){
+	                totalPrice = totalPrice - 0.05 * totalPrice;
+	            }
+
+	            // 10% discount if number of booked shows >= 10
+	            if(number_booked_shows >= 10){
+	                totalPrice = totalPrice - 0.10 * totalPrice;
+	            } -->
+
+	           	<!-- postMessage("&#x20b9; " + totalPrice); -->
+	        
+	</script> -->
+	<script src="scripts.js"></script>
+  </body>
+  </html>
