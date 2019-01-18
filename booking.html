@@ -4,21 +4,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Online Ticket Services</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/kaboyi.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   </head>
-  <body>
-  	<div id="container">
+  <body style="background-image: url(https://cdn.iphonephotographyschool.com/wp-content/uploads/2018/07/How-To-Blur-Background-On-iPhone-Camera-4.jpg)">
+  	<div class="container" style="text-align: center; background: gray">
+  	<div class="jumbotron"> 
+  		<div class="well">
+  		<div class="panel panel-heading">
+  			<h1>Booking information</h1>
+  		</div>
+  		<p><strong><em>Here you will find everything about your booking</em></strong>: <br><br>From information on booking options to payment methods.<br>Find information on ticket.</p>
+  		<p>You can buy any kind of ticket online based on the price.<br> Then you decide: save the match ticket as an online ticket (PDF) on your mobile device, and take it with you on your way as a printout.</p>
+  		</div>
+  		<div class="well"> 
+  			<div class="panel panel-heading">
+  				<h2>How to book an online ticket</h2>
+  			</div>
+  		    <ol class="way" style="text-align: center;">
+  			<li>Find the internet connection</li>
+  			<li>Go to "Event" and select the "Any kind of sport  you want among Football, Vollayball and  Basket" option.</li>
+  			<li>On the second option select a match among those listed.</li>
+  			<li>Enter your email address</li>
+  			<li>Select a date, number of ticket and  the desired price</li>
+            <li>You will receive your booked ticket digitally as a PDF download by e-mail.<br> Save your PDF ticket on your laptop, tablet or smartphone for convenient inspection.</li>
+  			<li>Alternatively, you can download your ticket, click on the link in the confirmation e-mail you will receive after booking.</li>
+  			<li>You can also print out the ticket as well.</li>
+  			</ol>
+  		</div>
+  		<div class="well">
 	  <div id="form">
-	    <form id="book_tickets">
+	    <form  id="book_tickets" action="" method="" name="book_tickets">
 	      <fieldset>
 	        <legend>Booking Details</legend>
-
 	        <p>
 	          <label for="Sports"> Sports</label>
 	          <select id="Sports" name="Sports" required autofocus>
 	            <option></option>
 	            <option value="Sport1">Football</option>
-	            <option value="Sport2">vallball</option>
+	            <option value="Sport2">vollball</option>
 	            <option value="Sport3">basktball</option>
 	          </select>
 	        </p>
@@ -44,18 +70,17 @@
 	        </p>
 
 	        <p>
-	          <label for="tickets_quantity">Tickets</label>
+	          <label for="tickets_quantity">Ticket(s)</label>
 	          <input type="number" min="1" name="tickets_quantity" id="tickets_quantity" required />
 	        </p>
 	        <p>
-	          <label for="tickets_quantity">Prices</label>
-	          <select>
+	          <label for="Price">Prices</label>
+	          <select name="">
 	          <option value="Match "></option>
-	         <option value="Match 1">1000rwf</option>
-	            <option value="Match 2">3000rwf</option>
-	            <option value="Match 3">5000rwf</option>
+	         <option value="Match1" name="ad" id="ticket">1000rwf</option>
+	            <option value="Match2" name="ad" id="ticket">3000rwf</option>
+	            <option value="Match3" name="ad" id="ticket">5000rwf</option>
 	            </select>
-	          <!-- <input type="number" min="2000" name="tickets_quantity" id="tickets_quantity" required /> -->
 	        </p>
 
 	        <p>
@@ -63,52 +88,23 @@
 	          <span id="total_price">(enter data first)</span>
 	        </p>
 	        <div id="submit_wrapper">
-	          <input type="submit" id="submit" value="Book Tickets" />
+	          <button id="submit" onclick="myFunction()">Book Tickets</button> 
+	            <!-- <h3>Message</h3>
+                <div class="alert">
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                   <strong>Done!!!</strong>You have booked your tickets. -->
+                </div>
 	        </div>
 	      </fieldset>
 	    </form>
-	  <!--   <p id="TicketPrice"></p> -->
-	    <!-- <p id="discount">
-	      <span id="disount_title">Discounts:</span>
-	    <ul>
-	      <li>5% discount if show is on weekday</li>
-	      <li>10% discount if number of booked shows >= 10</li>
-	    </ul>
-	    </p> -->
-	</div>
-
-	<!-- <fieldset id="movies_booked">
-	  <legend>Movies Booked Till Date</legend>
-	  <span id="movies_list"></span>
-	</fieldset>		 -->    	
-
-	</div>
-
-
-	<!-- <script id="worker" type="javascript/worker">
-	        self.onmessage = function msgWorkerHandler(event){
-	            var jsonString = event.data;
-
-	            var day = jsonString.day;
-	            var number_booked_shows = jsonString.number_booked_shows;
-	            var tickets_quantity = jsonString.tickets_quantity;
-
-	            // set price of each ticket as Rwf. 100
-	            var totalPrice = tickets_quantity * 100;
-<!-- 
-	            // 5% discount if on weekday
-	            if(day > 0 && day < 6){
-	                totalPrice = totalPrice - 0.05 * totalPrice;
-	            }
-
-	            // 10% discount if number of booked shows >= 10
-	            if(number_booked_shows >= 10){
-	                totalPrice = totalPrice - 0.10 * totalPrice;
-	            } -->
-
-	           	<!-- postMessage("&#x20b9; " + totalPrice); -->
-	        
-	</script> -->
-	<script src="scripts.js"></script>
+	   
+	    </div> 	
+	    </div>
+	    </div>
+  	<script type="text/javascript">
+  		function myFunction() {
+  alert("Thanks for booking!");
+}
+</script>
   </body>
   </html>
